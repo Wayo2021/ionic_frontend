@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;color:#FFC97F; background-color: #2B5B6C;"><b>แก้ไขข้อมูลส่วนตัว</b>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="chevron-back" style="text-align: center;color: #FFC97F; width: 40px; height: 25px;"
+        defaultHref="taps/drink" [routerLink]="['/taps/profile']"></ion-icon>
+      <!-- <ion-back-button defaultHref="taps/profile" style="text-align: center;color:#f0c55a;"></ion-back-button> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid class="main-header">
+    <div align="center">
+      <ion-label for="">ป้อนข้อมูลของคุณ</ion-label>
+      <!-- <ion-avatar>
+          <img src="http://localhost/ioniccrud/backend/img/" />
+        </ion-avatar> -->
+    </div>
+  </ion-grid>
+  <ion-row>
+    <ion-col>
+
+    </ion-col>
+  </ion-row>
+  <br>
+  <ion-row>
+    <!-- <ion-col size="2"></ion-col> -->
+    <ion-col size="">
+      <ion-list lines="full">
+        <ion-item color="light">
+          <ion-label>
+            <h3>ชื่อ</h3>
+            <h4>
+              <ion-text color="dark">
+                <ion-input [(ngModel)]="customers.cus_first_name"></ion-input>
+              </ion-text>
+            </h4>
+          </ion-label>
+        </ion-item>
+        <ion-item color="light">
+          <ion-label>
+            <h3>นามสกุล</h3>
+            <h4>
+              <ion-text color="dark">
+                <ion-input [(ngModel)]="customers.cus_last_name"></ion-input>
+              </ion-text>
+            </h4>
+          </ion-label>
+        </ion-item>
+        <ion-item color="light">
+          <ion-label>
+            <h3>อีเมล</h3>
+            <h4>
+              <ion-text color="dark">
+                <ion-input [(ngModel)]="customers.cus_email"></ion-input>
+              </ion-text>
+            </h4>
+          </ion-label>
+        </ion-item>
+
+        <!-- <ion-list>
+          <ion-item color="light">
+            <ion-label>
+              <h3>เพศ</h3>
+              <h4>
+                <ion-text color="dark">
+                  <ion-select [(ngModel)]="customers.cus_sex" interface="action-sheet" placeholder="เลือกเพศ">
+                    <ion-select-option value="m">ชาย</ion-select-option>
+                    <ion-select-option value="f">หญิง</ion-select-option>
+                    <ion-select-option value="0">ไม่ระบุ</ion-select-option>
+                  </ion-select>
+                </ion-text>
+              </h4>
+            </ion-label>
+          </ion-item>
+        </ion-list> -->
+      </ion-list>
+    </ion-col>
+      <!-- <ion-col size="2"></ion-col> -->
+
+      <div class="action-buttons ion-padding">
+        <ion-row>
+          <ion-col size="3">
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-button class="logout-button1" size="large" (click)="editSave()">ยืนยัน</ion-button>
+            </ion-item>
+          </ion-col>
+          <ion-col size="3">
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+          <ion-col size="10">
+            <ion-item>
+              <ion-button class="logout-button2" size="large" (click)="changePassword()">เปลี่ยนรหัสผ่าน</ion-button>
+            </ion-item>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+      </div>
+  </ion-row>
+</ion-content>

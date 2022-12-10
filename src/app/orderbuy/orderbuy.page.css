@@ -1,0 +1,11 @@
+.toolbar {
+  height: 80px;
+  --background: rgba(128, 0, 0, 0.534);
+  color: azure;
+  font-size: 20px;
+  text-align: center;
+}
+
+ion-item {
+  border-radius: 10px;
+}/*# sourceMappingURL=orderbuy.page.css.map */

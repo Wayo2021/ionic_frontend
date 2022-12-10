@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <p>รายการสั่งซื้อ<ion-icon name="reader-outline"></ion-icon>
+    </p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="background-color: rgb(192, 255, 128);">
+        <strong>รอชำระค่าเครื่องดื่ม</strong><br><br>
+        <ion-item [routerLink]="['/detailmoc']">
+          <ion-thumbnail slot="start">
+            <img src="assets/img/03-Mocca.jpg" alt="">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Mocca</strong>
+              <span style="float: right; color:brown">16 oz</span>
+            </h2>
+            <h3>มอคค่า:
+              <span style="float: right; color:brown">16 ออนซ์</span>
+            </h3>
+            <h3>x1
+              <span style="float: right; color:brown"></span>
+            </h3>
+            <h3>ราคา :
+              <span
+                style="float: right; color:brown">&nbsp;</span>
+            </h3>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h3>
+              รวมราคาสั่งซื้อ<span
+                style="float: right; color:brown">&nbsp;</span>
+            </h3>
+          </ion-label>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="background-color: rgb(192, 255, 128);">
+        <strong>ช่องทางการชำระค่าเครื่องดื่ม</strong><br><br>
+        <ion-item>
+          <label for="">
+            <h6>ชื่อบัญชี : &nbsp;
+              <span style="float: right; color:brown">Coffee cefe company</span>
+            </h6>
+            <h6>ออมสิน (GSB)
+              <span style="float: right; color:brown"></span>
+            </h6>
+            <h6>
+              เลขที่บัญชี : &nbsp; <span style="float: right; color:rgb(75, 157, 228)"> 020118721677 <ion-icon
+                  name="clipboard-outline" style="position: absolute; right:10px"></ion-icon></span>
+            </h6>
+          </label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <footer>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="cart-outline"></ion-icon>
+              <h6>
+                ชำระค่าเครื่องดื่มแล้ว <ion-icon name="checkmark-outline" style="color: rgb(115, 222, 8);"></ion-icon>
+              </h6>
+            </ion-label>
+
+            <ion-button  shape="round" color="success" size="small"
+              style="position: absolute; bottom: 10px; right:10px">ซื้อ <ion-icon name="paper-plane-outline"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </footer>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,108 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title style="text-align: center;color:#FFC97F; background-color: #2B5B6C;"><b>ข้อมูลส่วนตัว</b> </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-button class="edit-button" size="large" (click)="redirecToEditProfile()">แก้ไขข้อมูลส่วนตัว</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button class="logout-button" size="large" (click)="Logouts()">ออกจากระบบ</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <!-- <ion-toolbar color="">
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary" *ngIf=""></ion-menu-button>
+      <ion-back-button color="primary" *ngIf="" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="primary"> <b>แก้ไข</b> </ion-button>
+    </ion-buttons>
+  </ion-toolbar> -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button style="text-align: center;color:#FFC97F;"></ion-menu-button>
+      </ion-buttons>
+      <ion-title style="text-align: center;color:#FFC97F; background-color: #2B5B6C;"><b>ข้อมูลส่วนตัว</b> </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="ion-padding">
+      <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+    <ion-grid class="main-header">
+      <div align="center">
+        <ion-avatar *ngIf="loginUser !== null">
+          <img src="http://localhost/ioniccrud/backend/img/{{loginUser.image}}" />
+        </ion-avatar>
+      </div>
+    </ion-grid>
+    <div>
+      <ion-grid>
+        <ion-row class="ion-padding-horizontal" *ngIf="loginUser !== null">
+          <ion-col size="12" size-sm>
+            <ion-item lines="none" class="ion-text-center" color="light">
+              <ion-icon name="sparkles"></ion-icon>
+              <ion-label lines="inset">
+                {{loginUser.cus_point}}
+                <p>คะแนนสะสม</p>
+              </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <br><br><br>
+    <ion-grid>
+      <ion-row *ngIf="loginUser !== null">
+        <ion-col size="2"></ion-col>
+        <ion-col size="8">
+            <ion-item color="light">
+              <ion-label>
+                <h3>ชื่อ - นามสกุล</h3>
+                <p>
+                  <ion-text color="dark">{{loginUser.cus_first_name}} {{loginUser.cus_last_name}}</ion-text>
+                </p>
+              </ion-label>
+            </ion-item>
+            <ion-item color="light">
+              <ion-label>
+                <h3>เบอร์โทร</h3>
+                <p>
+                  <ion-text color="dark">{{loginUser.cus_phone}}</ion-text>
+                </p>
+              </ion-label>
+            </ion-item>
+            <ion-item color="light">
+              <ion-label>
+                <h3>อีเมล</h3>
+                <p>
+                  <ion-text color="dark">{{loginUser.cus_email}}</ion-text>
+                </p>
+              </ion-label>
+            </ion-item>
+        </ion-col>
+        <ion-col size="2"></ion-col>
+
+        <ion-col size="2" size-md="4" size-lg="2">
+        </ion-col>
+        <ion-col size="8" size-md="4" size-lg="2">
+          <ion-button class="myreward" size="medium" (click)="myReward()">ของรางวัลของฉัน</ion-button>
+        </ion-col>
+        <ion-col size="2" size-md="4" size-lg="2">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</div>

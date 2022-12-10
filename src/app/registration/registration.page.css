@@ -1,0 +1,83 @@
+ion-content {
+  --background: #fff;
+}
+
+.login-section {
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  background: #FFC97F;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  margin: auto;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.login-section .heading {
+  margin-top: 1px;
+}
+.login-section .heading h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: black;
+}
+.login-section .heading p {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #7b7b7b;
+}
+.login-section .login-form .form-input {
+  position: relative;
+  margin-bottom: 5px;
+}
+.login-section .login-form .form-input ion-item::part(native) {
+  padding-left: 0;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.login-section .login-form .form-input ion-icon {
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+  font-size: 1.5rem;
+  left: 5px;
+}
+.login-section .login-form .form-input ion-label {
+  position: absolute;
+  margin-left: 35px;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  top: 0.1px;
+}
+.login-section .login-form .form-input ion-input {
+  font-size: 1rem;
+  --padding-start: 30px;
+  --padding-top: 20px;
+  color: #7b7b7b;
+}
+.login-section .action-buttons {
+  text-align: center;
+}
+.login-section .action-buttons .login-button {
+  --background: #E34F33;
+  width: 100%;
+  font-weight: bold;
+}
+.login-section .action-buttons .register-button {
+  --border-color: #fff;
+  color: #E34F33;
+  width: 100%;
+  font-weight: bold;
+}
+.login-section .action-buttons p {
+  margin-top: 15px;
+  font-size: 3rem;
+  color: #7b7b7b;
+}/*# sourceMappingURL=registration.page.css.map */

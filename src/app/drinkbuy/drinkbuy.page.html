@@ -1,0 +1,168 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button color="back" defaultHref="home/drink"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;"><b>เลือกเครื่องดื่ม</b> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col style="background-color: antiquewhite;" class="stg"><strong>เอสเพรสโซ่</strong></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-slides pager>
+          <ion-slide>
+            <img src="../assets/coffee_cafe/1-Espresso.jpg" alt="">
+          </ion-slide>
+          <ion-slide>
+            <img src="../assets/coffee_cafe/1-Espresso.jpg" alt="">
+          </ion-slide>
+          <ion-slide>
+            <img src="../assets/coffee_cafe/1-Espresso.jpg" alt="">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="background-color: antiquewhite;" class="stg">
+        <p>
+          ใครที่เพิ่งเริ่มหัดดื่มกาแฟ มีส่วนประกอบหลักคือกาแฟเอสเปรสโซ แต่เพิ่มนมสด และฟองนมเข้ามา
+          เหมาะสำหรับท่านที่อยากลดความเข้มข้นลงมาหน่อย แถมได้สัมผัสความละมุนจากฟองนมนุ่มๆ ตอนดื่ม
+          อาจโรยหน้าด้วยผงซินนาม่อน
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="background-color: antiquewhite;" class="stg">
+        <ion-list>
+          <ion-radio-group value (ionChange)="($event)">
+            <ion-row>
+              <ion-col style="background-color: antiquewhite;" class="stg"><ion-label>&nbsp;<b><ion-icon name="reader-outline"></ion-icon>&nbsp;เลือกชนิดและขนาด</b></ion-label></ion-col>
+            </ion-row>
+
+
+            <ion-item>
+              <ion-icon name="flame-outline"></ion-icon>
+              <ion-label>ร้อน</ion-label>
+              <ion-list>
+
+                <!-- <ion-item>
+                  <ion-label>เล็ก</ion-label>
+                  <p>฿100</p>
+                  <ion-radio slot="end" value="hotS"></ion-radio>
+                </ion-item> -->
+
+                <ion-list>
+                  <ion-item>
+                    <ion-select placeholder="เลือกชนิด">
+                      <ion-select-option value="hots">เล็ก 100฿</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+
+              </ion-list>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="snow-outline"></ion-icon>
+              <ion-label>เย็น</ion-label>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label>เล็ก</ion-label>
+                  <p>฿120</p>
+                  <ion-radio slot="end" value="coolS"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>ใหญ่</ion-label>
+                  <p>฿135</p>
+                  <ion-radio slot="end" value="coolL"></ion-radio>
+                </ion-item>
+
+              </ion-list>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="sync-circle-outline"></ion-icon>
+              <ion-label>ปั่น</ion-label>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label>เล็ก</ion-label>
+                  <p>฿130</p>
+                  <ion-radio slot="end" value="shakeS"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>ใหญ่</ion-label>
+                  <p>฿145</p>
+                  <ion-radio slot="end" value="shakeL"></ion-radio>
+                </ion-item>
+
+              </ion-list>
+            </ion-item>
+
+          </ion-radio-group>
+        </ion-list>
+
+        <!-- <ion-list>
+          <ion-item>
+
+            <ion-select placeholder="ขนาด">
+              <ion-select-option value="apples">เล็ก</ion-select-option>
+              <ion-select-option value="oranges">ใหญ่</ion-select-option>
+            </ion-select>
+
+            <ion-select placeholder="ประเภท">
+              <ion-select-option value="apples">ร้อน</ion-select-option>
+              <ion-select-option value="oranges">เย็น</ion-select-option>
+              <ion-select-option value="bananas">ปั่น</ion-select-option>
+            </ion-select>
+
+            <ion-select placeholder="ราคา">
+              <ion-select-option value="apples">100</ion-select-option>
+              <ion-select-option value="oranges">110</ion-select-option>
+              <ion-select-option value="bananas">120</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-select placeholder="ประเภท">
+              <ion-select-option value="apples">Apples</ion-select-option>
+              <ion-select-option value="oranges">Oranges</ion-select-option>
+              <ion-select-option value="bananas">Bananas</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-select placeholder="ราคา">
+              <ion-select-option value="apples">Apples</ion-select-option>
+              <ion-select-option value="oranges">Oranges</ion-select-option>
+              <ion-select-option value="bananas">Bananas</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list> -->
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="background-color: antiquewhite;" class="stg">
+        <footer>
+          <b><ion-icon name="cart-outline"></ion-icon></b>
+          <p>&nbsp;กดสั่งเลย</p>
+          <ion-button (click)="onClickBuy()" shape="round" color="success" size="small"
+            style="position: absolute; bottom: 10px; right:10px">
+            สั่งซื้อ
+          </ion-button>
+        </footer>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

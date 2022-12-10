@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;color:#fff; background-color: #2B5B6C;"><ion-icon name="lock-closed-outline"></ion-icon>เข้าสู่ระบบ</ion-title>
+    <!-- <ion-buttons slot="start">
+      <ion-back-button defaultHref="/welcome" style="text-align: center;color:#f0c55a;"></ion-back-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmitForm()" novalidate>
+    <div class="login-section ion-padding">
+      <div class="heading ion-padding">
+        <!-- <h1>
+          <ion-icon name="lock-closed-outline"></ion-icon>เข้าสู่ระบบ
+        </h1> -->
+      </div>
+      <div class="login-form ion-padding">
+        <div class="form-input">
+          <ion-icon name="call-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">เบอร์โทร</ion-label>
+            <ion-input formControlName="cus_phone" placeholder="เบอร์โทร" maxlength="10" pattern="^0([8|9|6])([0-9]{8}$)" required></ion-input>
+
+          </ion-item>
+          <div class="error" *ngIf="isSubmittes && loginForm.get('cus_phone').errors?.required">
+              กรุณาระบุเบอร์โทรศัพท์
+            </div>
+
+            <div class="error" *ngIf="isSubmittes && loginForm.get('cus_phone').errors?.minlength">
+                กรุณาระบุ เบอร์โทรศัพท์ 10 หมายเลข
+            </div>
+        </div>
+        <div class="form-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">รหัสผ่าน</ion-label>
+            <ion-input type="password" formControlName="cus_password" placeholder="รหัสผ่าน" required></ion-input>
+          </ion-item>
+          <div class="error" *ngIf="isSubmittes && loginForm.get('cus_password').errors?.required">
+            กรุณาระบุ รหัสผ่าน
+          </div>
+        </div>
+        <!-- <div [routerLink]="['/forgotpassword']">
+        ลืมรหัสผ่าน
+        </div> -->
+      </div>
+      <div class="action-buttons ion-padding">
+        <ion-button class="login-button" size="large" type="submit">ล็อคอิน</ion-button>
+
+        <ion-button class="register-button" expand="block" fill="outline" [routerLink]="['/registration']">ลงทะเบียน
+        </ion-button>
+      </div>
+
+    </div>
+  </form>
+</ion-content>

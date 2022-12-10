@@ -1,0 +1,79 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content .greetings {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "bng";
+}
+ion-content .greetings img {
+  height: 170px;
+  width: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: saddlebrown;
+  margin-bottom: 2em;
+  border-radius: 30px;
+}
+ion-content .greetings h2 {
+  margin: 0;
+}
+ion-content .greetings h2 span {
+  color: brown;
+  font-family: "bngblack";
+}
+ion-content .greetings #welcome {
+  font-weight: 900;
+  font-family: "bngblack";
+}
+
+ion-footer .action-buttons {
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  background-color: yellowgreen;
+  height: 10em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+}
+ion-footer .action-buttons ion-button {
+  width: 100%;
+  font-family: "bngblack";
+  font-size: 0.8em;
+}
+ion-footer .action-buttons #login {
+  --background: #fff;
+  --color: yellowgreen;
+  margin-right: 1em;
+}
+ion-footer .action-buttons #register {
+  --border-color: #fff;
+  --color: #fff;
+}/*# sourceMappingURL=home.page.css.map */

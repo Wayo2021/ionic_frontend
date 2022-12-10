@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;color: #FFC97F;background-color: #2B5B6C;"><b>เครื่องดื่ม</b>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="chevron-back" style="text-align: center;color: #FFC97F; width: 40px; height: 25px;" defaultHref="taps/drink" [routerLink]="['/taps/drink']"></ion-icon>
+      <!-- <ion-back-button style="text-align: center;color: #FFC97F;" defaultHref="taps/drink"></ion-back-button> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="stg">
+        <ion-searchbar search-icon="search-circle" color="light" placeholder="ค้นหาเครื่องดื่ม"
+          [(ngModel)]="searchDrinks" animated></ion-searchbar>
+      </ion-col>
+    </ion-row>
+
+    <br>
+
+    <ion-row>
+      <ion-col style="background-color:#FFC97F ;" class="stg">
+        <ion-label>&nbsp;<b>ชื่อเครื่องดื่ม : ประเภทเครื่องดื่ม</b></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="background-color: #2B5B6C;" class="stg">
+      </ion-col>
+    </ion-row>
+
+
+    <!-- <ion-list>
+      <ion-item *ngFor="let drink of drinks">
+        <ion-thumbnail  slot="start">
+        <img src="http://localhost/ioniccrud/backend/img/{{drink.image}}" alt="">
+        </ion-thumbnail>
+        <h2><strong>{{drink.drk_name}}</strong></h2><hr>
+        <p><strong>{{drink.drk_price}} บาท</strong></p>
+        <ion-button slot="end">เลือก</ion-button>
+      </ion-item>
+    </ion-list> -->
+
+<ion-row>
+      <ion-col class="stg">
+        <ion-list lines="inset">
+          <!-- <ion-card color="" >
+            <ion-card-content> -->
+          <ion-list *ngFor="let dr of drk | filter:searchDrinks">
+            <ion-item color="light" >
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="http://localhost/start3-css/view/img/{{dr.image}}" />
+              </ion-thumbnail>
+              <ion-label>
+                <h2>{{dr.drk_name}} | {{dr.typs_name}}</h2>
+                <h3>{{dr.siz_name}} : {{dr.drk_price}} บาท</h3>
+                <!-- <ion-button shape="round" color="success" size="small" style="position: absolute; bottom: 10px; right:10px">
+                  ซื้อ
+                </ion-button> -->
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          <!-- </ion-card-content>
+          </ion-card> -->
+
+          <!-- <ion-item [routerLink]="['/drinkbuy']">
+            <ion-thumbnail slot="start">
+              <img src="http://localhost/ioniccrud/backend/img/{{drink.image}}" alt="">
+            </ion-thumbnail>
+            <ion-label>
+            <h2><strong>{{drink.drk_name}}</strong></h2>
+            <hr>
+            <ion-button slot="end">เลือก</ion-button>
+            </ion-label>
+          </ion-item> -->
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col style="background-color: #2B5B6C;" class="stg">
+      </ion-col>
+    </ion-row> -->
+  </ion-grid>
+</ion-content>
